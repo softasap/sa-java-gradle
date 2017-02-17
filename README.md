@@ -1,7 +1,7 @@
 sa-etherpad
 ===========
 
-[![Build Status](https://travis-ci.org/softasap/sa-etherpad.svg?branch=master)](https://travis-ci.org/softasap/sa-etherpad)
+[![Build Status](https://travis-ci.org/softasap/sa-java-gradle.svg?branch=master)](https://travis-ci.org/softasap/sa-java-gradle)
 
 
 Example of usage (all parameters are optional)
@@ -12,7 +12,7 @@ Simple
 ```YAML
   roles:
     - {
-        role: "sa-etherpad"
+        role: "sa-java-gradle"
       }
 ```
 
@@ -22,20 +22,10 @@ Advanced:
 
   roles:
     - {
-        role: "sa-etherpad",
-
-        deploy_user: "etherpad",
-
-        options_create_etherpad_user: true,
-        option_nodejs_install_with_nvm: true,
-
-        etherpad_install_dir: /opt/etherpad,
-
-        nvm_version: 0.31.1,
-        nodejs_version: "6.9.2",
-        option_nodejs_link_globally: false,
-        option_integrate_w_bash: false,
-        option_integrate_w_zsh: false
+        role: "sa-java-gradle",
+        gradle_version: "3.3",
+        gradle_install_dir: "/opt/gradle",
+        option_gradle_in_path: false
       }
 
 ```      

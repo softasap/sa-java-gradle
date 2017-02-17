@@ -1,5 +1,13 @@
 ---
 
+  - name: Gradle | Install dependencies
+    apt: pkg="{{item}}" state="present"
+    with_items:
+      - unzip
+    become: yes
+    tags:
+      - gradle
+
   - name: Gradle | Create installation directory
     file: path="{{gradle_install_dir | default('/opt/gradle')}}" state="directory" 
     become: yes
