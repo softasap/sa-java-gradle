@@ -1,8 +1,7 @@
-sa-etherpad
-===========
+sa-java-gradle
+==============
 
 [![Build Status](https://travis-ci.org/softasap/sa-java-gradle.svg?branch=master)](https://travis-ci.org/softasap/sa-java-gradle)
-
 
 Example of usage (all parameters are optional)
 
@@ -29,6 +28,43 @@ Advanced:
       }
 
 ```      
+
+Important!
+
+For consistency of historic builds it is recommended to use gradlew wrapper.
+How to deal with it?
+
+
+Create a Gradle Wrapper:
+
+a) Declares a wrapper task.
+
+```java
+build.gradle
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.10' //we want gradle 2.10 to run this project
+}
+```
+
+b) Run the wrapper task with gradle wrapper
+
+```
+$ gradle wrapper
+
+:wrapper
+
+BUILD SUCCESSFUL
+1.3 The following files will be created, remember to add these files and folders to your version control system (e.g GitHub or Bitbucket).
+
+|-gradle
+  |--- wrapper
+      |--- gradle-wrapper.jar
+      |--- gradle-wrapper.properties
+|-gradlew
+|-gradlew.bat 
+```
+
+Review the gradlew file, a unix shell script to run the Gradle task
 
 
 Copyright and license
