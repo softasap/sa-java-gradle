@@ -1,0 +1,4 @@
+---
+# tasks file for sa-java-gradle
+
+  - include: tasks_gradle.yml
